@@ -28,3 +28,8 @@ public class BubboleSort {
       b.printArray(arr);
     }
 }
+
+// Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
+// Complexity of the bubble sort algorithm is, 
+// Worst Case/Average Case: O(n*n). Worst Case occurs when array is reverse sorted
+// Best Case: O(n). It occurs when array is already sorted. 
