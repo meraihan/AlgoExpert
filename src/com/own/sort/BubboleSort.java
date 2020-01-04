@@ -1,3 +1,5 @@
+package com.own.sort;
+
 public class BubboleSort {
     
     void bubbleSort(int arr[]){

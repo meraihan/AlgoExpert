@@ -1,3 +1,5 @@
+package com.own.sort;
+
 public class SelectionSort {
     
     void sort(int arr[]){
