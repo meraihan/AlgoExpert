@@ -1,3 +1,5 @@
+package com.own.coursera;
+
 import java.util.Scanner;
 
 class SumOfDigits {
