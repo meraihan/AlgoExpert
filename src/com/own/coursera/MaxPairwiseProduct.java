@@ -6,26 +6,33 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/**
+ * @author raihan on 1/5/2020
+ */
 public class MaxPairwiseProduct {
-    static int getMaxPairwiseProduct(int[] numbers) {
-        int product = 0;
-        int n = numbers.length;
-        for (int i = 0; i < n; ++i) {
-            for (int j = i + 1; j < n; ++j) {
-                product = Math.max(product,
-                        numbers[i] * numbers[j]);
+    static long MaxPairwiseProductFast(long[] numbers) {
+        int index1 = -1, n = numbers.length;
+        for (int i=0;i<n;i++){
+            if ((index1==-1) || numbers[i]>numbers[index1]){
+                index1 = i;
             }
         }
-        return product;
+        int index2 = -1;
+        for(int i=0;i<n;i++){
+            if(i!=index1 && ((index2==-1) || numbers[i]>numbers[index2])){
+                index2=i;
+            }
+        }
+        return (long) numbers[index1] * numbers[index2];
     }
     public static void main(String[] args) {
         FastScanner scanner = new FastScanner(System.in);
         int n = scanner.nextInt();
-        int[] numbers = new int[n];
+        long[] numbers = new long[n];
         for (int i = 0; i < n; i++) {
             numbers[i] = scanner.nextInt();
         }
-        System.out.println(getMaxPairwiseProduct(numbers));
+        System.out.println(MaxPairwiseProductFast(numbers));
     }
     static class FastScanner {
         BufferedReader br;
