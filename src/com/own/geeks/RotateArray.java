@@ -1,4 +1,6 @@
-public class RotateArray { 
+package com.own.geeks;
+
+public class RotateArray {
     /*Function to left rotate arr[] of size n by d*/
     void leftRotate(int arr[], int d, int n) 
     { 
