@@ -7,8 +7,7 @@ package com.own.sort;
  * are sorted and merges the two sorted sub-arrays into one
  */
 
-public class MergeSort
-{
+public class MergeSort {
     void merge(int arr[], int l, int m, int r) {
         // Find sizes of two subarrays to be merged
         int n1 = m - l + 1;
